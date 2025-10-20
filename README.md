@@ -59,6 +59,11 @@ API-SHOES-WASH/
 ### 1. GET /api/items - Mendapatkan semua data
 **Request:**
 GET /api/items
+
+Response:
+
+```
+[
 {
   "success": true,
   "data": [
@@ -76,4 +81,6 @@ GET /api/items
   ],
   "total": 1
 }
-GET /api/items?status=Selesai
+]
+
+```
