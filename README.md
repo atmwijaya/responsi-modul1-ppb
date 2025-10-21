@@ -6,6 +6,21 @@ REST API untuk layanan daftar barang cuci sepatu yang dibangun dengan Node.js, E
 
 API ini menyediakan layanan manajemen data untuk bisnis cuci sepatu, memungkinkan pengelolaan data sepatu yang sedang dalam proses pencucian dengan operasi CRUD lengkap.
 
+## 🎯 Tujuan
+
+1. Mengimplementasikan operasi CRUD dalam REST API.
+2. Melakukan pengolahan sistem basis data dengan framework Express sebagai backend.
+3. Membangun sistem pencatatan yang relevan untuk kebutuhan bisnis.
+4. Melakukan filter data berdasarkan status.
+
+## 🎯 Fitur Utama
+
+- **CRUD Operations**: Create, Read, Update, Delete data sepatu
+- **Status Filter**: Filter data berdasarkan status pencucian
+- **RESTful Design**: Mengikuti standar REST API
+- **MVC Architecture**: Pattern Model-View-Controller
+- **Cloud Database**: Menggunakan Supabase sebagai database
+
 ## 🏗 Struktur Data
 
 Contoh struktur data yang disimpan ke dalam database:
@@ -34,16 +49,6 @@ Keterangan:
 - **status**: Status sepatu
 - **created_at**: Tanggal masuk sepatu
 - **updated_at**: Tanggal pembaharuan sepatu
-
-## 🎯 Fitur Utama
-
-- **CRUD Operations**: Create, Read, Update, Delete data sepatu
-- **Status Filter**: Filter data berdasarkan status pencucian
-- **RESTful Design**: Mengikuti standar REST API
-- **MVC Architecture**: Pattern Model-View-Controller
-- **Cloud Database**: Menggunakan Supabase sebagai database
-
-## 🗂 Struktur Data
 
 ### Tabel: shoe_items
 
@@ -214,3 +219,40 @@ Response:
 ```
 
 ## Langkah Instalasi dan Cara Menjalankan API
+### 1. Clone pada GitHub ke dalam folder kerja anda
+
+```
+git clone https://github.com/atmwijaya/responsi-modul1-ppb.git
+cd api-shoe-wash
+```
+
+### 2. Lakukan install dependencies
+
+```
+npm install
+```
+
+### 3. Setup environmental variables
+Buat file .env yang berisi sebagai berikut:
+
+```
+SUPABASE_URL=https://xwzzsicukxgdvpxtskdl.supabase.co
+SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh3enpzaWN1a3hnZHZweHRza2RsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA5NzM0NDUsImV4cCI6MjA3NjU0OTQ0NX0.KCp4MJkCMUANNr14ETE6tUo_0j3mC92yKgtczw_V848
+PORT=3000
+```
+
+### 4. Jalankan API
+
+```
+npm run dev
+```
+
+### 5. Lakukan pengujian API dengan alamat sebagai berikut:
+
+```
+http://localhost:3000/api/items
+```
+
+## Link Deployment Vercel
+
+https://responsi-modul1-ppb-swart.vercel.app/api/items
