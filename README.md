@@ -75,10 +75,6 @@ Response:
 **Request:**
 POST /api/items
 
-Response:
-
-```
-
 Body:
 POST /items
 
@@ -90,6 +86,7 @@ POST /items
   "description": "deskripsi sepatu",
   "phone_number": "nomor telepon"
 }
+
 ```
 
 Response:
