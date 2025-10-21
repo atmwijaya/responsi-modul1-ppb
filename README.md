@@ -176,6 +176,7 @@ Response:
 ### 4. DELETE /api/items - Menghapus data sepatu yang sudah selesai
 **REQUEST:**
 DELETE api/items/:id
+
 Response:
 
 ```
@@ -189,6 +190,7 @@ Response:
 
 API ini dilengkapi dengan fitur filter berdasarkan status sepatu, misalnya:
 GET /items?status=Selesai
+
 Response:
 
 ```
