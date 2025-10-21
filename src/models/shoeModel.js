@@ -34,7 +34,7 @@ export const createShoe = async (shoeData) => {
   const newShoe = {
     ...shoeData,
     status: "Diterima",
-    create_at: new Date().toISOString(),
+    created_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
   };
 
@@ -48,7 +48,7 @@ export const createShoe = async (shoeData) => {
   return data;
 };
 
-export const updateShoe = async (id, shoeData) => {
+export const updateShoe = async (id, updates) => {
   const supabase = getSupabase();
   const updatedData = {
     ...updates,

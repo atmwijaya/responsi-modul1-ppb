@@ -64,6 +64,12 @@ export const createShoe = async (req, res) => {
       description: description || "",
       phone_number: phone_number || "",
     });
+
+    res.status(201).json({
+      success: true,
+      message: "Data sepatu berhasil ditambahkan.",
+      data: newShoe,
+    });
   } catch (error) {
     console.error("Error creating shoe item:", error);
     res.status(500).json({
@@ -85,6 +91,7 @@ export const updateShoe = async (req, res) => {
       phone_number,
       status,
     } = req.body;
+
     const updates = {};
     if (customer_name !== undefined) updates.customer_name = customer_name;
     if (shoe_type !== undefined) updates.shoe_type = shoe_type;
@@ -92,6 +99,7 @@ export const updateShoe = async (req, res) => {
     if (description !== undefined) updates.description = description;
     if (phone_number !== undefined) updates.phone_number = phone_number;
     if (status !== undefined) updates.status = status;
+    
     const updatedShoe = await shoeModel.updateShoe(id, updates);
 
     res.json({
