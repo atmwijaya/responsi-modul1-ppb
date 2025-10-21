@@ -6,21 +6,7 @@ REST API untuk layanan daftar barang cuci sepatu yang dibangun dengan Node.js, E
 
 API ini menyediakan layanan manajemen data untuk bisnis cuci sepatu, memungkinkan pengelolaan data sepatu yang sedang dalam proses pencucian dengan operasi CRUD lengkap.
 
-## 🏗 Struktur Project
-API-SHOES-WASH/
-├── src/
-│ ├── config/
-│ │ └── supabase.js
-│ ├── controllers/
-│ │ └── shoeController.js
-│ ├── models/
-│ │ └── shoeModel.js
-│ ├── routes/
-│ │ └── shoeRoutes.js
-│ └── index.js
-├── package.json
-├── vercel.json
-└── README.md
+## 🏗 Struktur Data
 
 
 ## 🎯 Fitur Utama
@@ -54,7 +40,7 @@ API-SHOES-WASH/
 - `Selesai` - Proses selesai
 - `Diambil` - Sudah diambil pelanggan
 
-## 🚀 Contoh Request dan Response
+## Contoh Request dan Response
 
 ### 1. GET /api/items - Mendapatkan semua data
 **Request:**
@@ -84,3 +70,51 @@ Response:
 ]
 
 ```
+
+### 2. POST /api/items - Mendaftarkan sepatu 
+**Request:**
+POST /api/items
+
+Response:
+
+```
+
+Body:
+POST /items
+
+```
+{
+  "customer_name": "nama kustomer",
+  "shoe_type": "tipe sepatu",
+  "shoe_brand": "merek sepatu",
+  "description": "deskripsi sepatu",
+  "phone_number": "nomor telepon"
+}
+```
+
+Response:
+
+```
+[
+{
+  "success": true,
+  "data": [
+    {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "customer_name": "nama kustomer",
+      "shoe_type": "tipe sepatu",
+      "shoe_brand": "merek sepatu",
+      "description": "deskripsi sepatu",
+      "phone_number": "nomor telepon",
+      "status": "Diterima",
+      "created_at": "2024-01-15T10:30:00Z",
+      "updated_at": "2024-01-15T10:30:00Z"
+    }
+  ],
+  "total": 1
+}
+]
+
+```
+
+### 3. PUT /api/items - Memperbaharui status sepatu
